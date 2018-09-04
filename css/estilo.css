@@ -1,0 +1,44 @@
+.gomath:link,
+.gomath:visited ,
+.gomath:hover,
+.gomath:active {
+	color:#FFf; 
+	font-size: 30px;
+}
+
+.navbar-light .navbar-nav .nav-link {
+	color: white;
+}
+
+.centro{
+	margin: 0 auto;
+}
+
+
+.fraseinicio{
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
+	font-size: 29px;
+	letter-spacing: 4.4px;
+	word-spacing: 3.8px;
+	color: #000000;
+	font-weight: 700;
+	text-decoration: none solid rgb(68, 68, 68);
+	font-style: normal;
+	font-variant: normal;
+	text-transform: lowercase;
+	text-align: center;
+}
+body { 
+
+	background-color: #DFDBE5;
+	background-color: #e5e7dc;
+	background-image: url("data:image/svg+xml,%3Csvg width='42' height='44' viewBox='0 0 42 44' xmlns='http://www.w3.org/2000/svg'%3E%3Cg id='Page-1' fill='none' fill-rule='evenodd'%3E%3Cg id='brick-wall' fill='%2317a2b8' fill-opacity='0.1'%3E%3Cpath d='M0 0h42v44H0V0zm1 1h40v20H1V1zM0 23h20v20H0V23zm22 0h20v20H22V23z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+	background-repeat: repeat; 
+  
+}
+
+label, button{
+	font-size: 0.8em;
+	text-transform: uppercase;
+	font-weight: bold;
+}
