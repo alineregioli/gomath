@@ -20,7 +20,7 @@
 			<div class="row">
 
 				<div class="col-md-6 centro" >
-					<form >
+					<form action="control/cadastrar.php" method="POST" >
 						<div class="form-group">
 							<label for="nome-completo" class="mb-0 mt-5">Nome completo</label>
 							<input type="text" class="form-control" id="nome-completo" name="nome-completo" placeholder="Maria da Silva">
