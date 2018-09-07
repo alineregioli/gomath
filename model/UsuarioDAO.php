@@ -15,25 +15,16 @@ Class UsuarioDAO{
 
     public function inserir($banco,$objeto){
         echo '<pre>';
-        $array =  get_object_vars($objeto);
-        array_pop($array);
-        array_pop($array);
-        var_dump($array);
         $sql = "INSERT INTO tbusuario (";
-        $aux = '';
-       foreach($array as $key => $value){
-            $sql .= $key.',';
-            $aux .= $value.',';
-        } 
-        $sql = rtrim($sql,',');
-        $aux = rtrim($aux,',');
-        $sql .= ') VALUES ('.$aux.')';
-        echo $sql;
+        $sql .=  implode(',', $objeto->__attributes());
+        $sql .= ") VALUES ('";
+        $sql .=  implode("','", $objeto->__values());
+        $sql .= "')";
         if ($banco->conexao->query($sql) === TRUE) {
-            echo "New record created successfully";
+            echo "Cadastrado com sucesso";
         } 
         else {
-            echo "Error: " . $sql . "<br>" . $banco->conexao->error;
+            throw new Exception("Error: " . $sql . "<br>" . $banco->conexao->error);
         }
 
     }

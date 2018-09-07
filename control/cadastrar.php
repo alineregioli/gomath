@@ -8,8 +8,19 @@ $banco = new Banco();
 $banco->conectar();
 echo '<pre>';
 $Usuario = new Usuario();
-$Usuario->Init($_POST['nome-completo'],$_POST['email'],$_POST['senha'], date('Y-m-d H:i:s'),$_POST['sexo'],2);
+$Usuario->__set('usuarioNomeCompleto',$_POST['nome-completo']);
+$Usuario->__set('usuarioEmail',$_POST['email']);
+$Usuario->__set('usuarioSenha',$_POST['senha']);
+$Usuario->__set('usuarioDataCadastro', date('Y-m-d H:i:s'));
+$Usuario->__set('usuarioSexo',$_POST['sexo']);
+$Usuario->__set('TbEspecie_especieId',2);
 var_dump($Usuario);
-/*var_dump($_POST);
+var_dump($Usuario->__attributes());
 $UsuarioDAO = new UsuarioDAO();
-$UsuarioDAO->inserir($banco,$Usuario); */
+
+try{
+	$UsuarioDAO->inserir($banco,$Usuario);
+}
+catch(Exception $e){
+	echo $e->getMessage();
+}
