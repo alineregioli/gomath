@@ -1,0 +1,28 @@
+web:
+ container_name: gomath
+ image: httpd:latest
+ environment:
+ - ALLOW_OVERRIDE=true
+ restart: always
+ ports:
+ - "555:80"
+ expose:
+ - "9000"
+ tty: true
+ links:
+ - db:banco
+ volumes:
+ - /home/abner/projetos/gomath:/usr/local/apache2/htdocs
+ - /home/abner/Configs/apache:/etc/php5/apache2
+ - /home/abner/Configs/sites-available:/etc/apache2/sites-enabled
+ 
+db:
+  container_name: dbmath
+  image: mysql
+  environment:
+   - MYSQL_ROOT_PASSWORD=root
+   - MYSQL_DATABASE=bancotcc
+  ports:
+    - "355:3306"
+
+
