@@ -21,7 +21,7 @@
 
 				<div class="col-md-6 centro" >
 
-					<form style="margin: 100px auto">
+					<form style="margin: 100px auto" action="control/logar.php" method="POST" >
 					
 						<div class="form-group">
 							<label for="email" class="mb-0">Email</label>
