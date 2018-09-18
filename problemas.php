@@ -18,16 +18,16 @@
 		<!-- Campo registrar -->
 		<div class="container" style="background:white; margin-top: 10px;">
 			<div class="row" >
-				<div class="col-md-12 centro" >
-					<table class="table table-striped">
-						<thead>
+				<div class="col-md-12 centro" style="margin-top: 10px;">
+					<table class="table table-striped table-sm table-hover ">
+						<thead class="thead-dark">
 						    <tr>
-						      <th scope="col">ID</th>
-						      <th scope="col">#</th>
-						      <th scope="col">Nome</th>
-						      <th scope="col">Assunto</th>
-						      <th scope="col">Resolveram</th>
-						      <th scope="col">Nível</th>
+						      <th scope="col" class="w-20">ID</th>
+						      <th scope="col" class="w-10">#</th>
+						      <th scope="col" class="w-50">Nome</th>
+						      <th scope="col" class="w-10">Assunto</th>
+						      <th scope="col" class="w-5">Resolveram</th>
+						      <th scope="col" class="w-5">Nível</th>
 						    </tr>
 						</thead>
 						<tbody>
