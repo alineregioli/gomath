@@ -10,8 +10,10 @@ $senha = $_POST['senha'];
 
 $banco = new Banco();
 $banco->conectar();
-$banco->logar($login,$senha);
-var_dump ($_SESSION['login']);
-var_dump ($_SESSION['senha']);
-
+if($banco->logar($login,$senha)){
+	header('Location: ../problemas.php');
+}
+else{
+	header('Location: ../entar.php');
+}
 ?>

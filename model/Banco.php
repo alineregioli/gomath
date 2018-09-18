@@ -24,12 +24,12 @@ Class Banco{
 		if(mysqli_num_rows ($result) > 0 ){
 			$_SESSION['login'] = $login;
 			$_SESSION['senha'] = $senha;
-			echo "tem";
+			return true;
 		}
 		else{
 		  unset ($_SESSION['login']);
 		  unset ($_SESSION['senha']);
-		  echo "nao tem";
+		  return false;
 		}
 	}
 
