@@ -28,26 +28,26 @@
 
 					  <div class="form-group">
 					    <label for="nomeQuestao">Nome da Questão</label>
-					    <input type="text" class="form-control" id="nomeQuestao" >
+					    <input type="text" class="form-control" id="nomeQuestao" name="nomeQuestao" >
 					  </div>
 
 					 <div class="form-group">
 					    <label for="assuntoQuestao">Assunto da Questão</label>
-					    <input type="text" class="form-control" id="assuntoQuestao" >
+					    <input type="text" class="form-control" id="assuntoQuestao" name="assuntoQuestao">
 					  </div>
 
 					  <div class="form-group">
 					    <label for="dificuldadeQuestao">Dificuldade da Questão</label>
-					      <select id="dificuldadeQuestao" class="form-control">
-					        <option>1 - Fácil</option>
-					        <option>2 - Médio</option>
-					        <option>3 - Difícil</option>
+					      <select id="dificuldadeQuestao" name="dificuldadeQuestao" class="form-control">
+					        <option value ="1" >1 - Fácil</option>
+					        <option value ="2" >2 - Médio</option>
+					        <option value ="3" >3 - Difícil</option>
 					      </select>
 					  </div>
 
 					  <div class="form-group">
 					    <label for="enunciadoQuestao">Enunciado da questão</label>
-					    <textarea class="form-control" id="enunciadoQuestao" rows="5"></textarea>
+					    <textarea class="form-control" id="enunciadoQuestao" name="enunciadoQuestao" rows="5"></textarea>
 					  </div>
 
 					  <h3> Alternativas</h3>
@@ -101,7 +101,7 @@
 
 					 <div class="form-group">
 					    <label for="paraSalvar">Dados a salvar na submissão</label>
-					    <textarea class="form-control" id="paraSalvar" rows="2"></textarea>
+					    <textarea class="form-control" id="paraSalvar" name="paraSalvar" rows="2"></textarea>
 					  </div>
 
 
