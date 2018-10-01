@@ -14,6 +14,6 @@ if($banco->logar($login,$senha)){
 	header('Location: ../problemas.php');
 }
 else{
-	header('Location: ../entar.php');
+	header('Location: ../entrar.php');
 }
 ?>

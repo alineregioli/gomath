@@ -19,6 +19,4 @@ Class Usuario extends Comum{
 
 
 
-
-
 ?>

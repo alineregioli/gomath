@@ -22,7 +22,7 @@
 
 				<div class="col-md-8 rounded" style="background:white;margin-top: 10px;">
 
-					<form  >
+					<form action="control/cadastrar-questao.php" method="POST" >
 						<p></p>
 						 <h3> Cadastro de Questão</h3>
 
