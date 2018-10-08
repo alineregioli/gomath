@@ -8,7 +8,6 @@ Class Questao extends Comum{
     protected $questaoDataCriacao;	
     protected $questaoAssunto;	
  	protected $questaoDificuldade;
- 	protected $TbAlternativa_alternativaId;
     protected $questaoDados;
 
     public function __construct(){

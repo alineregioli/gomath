@@ -3,13 +3,14 @@
 Class QuestaoDAO{
     
     private $alternativaTexto;
+    private $alternativaCorreta;
     private $TbQuestao_questaoId;
 
 
     function __construct(){
 		
     }
-
+ 
     public function inserir($banco,$objeto){
         echo '<pre>';
         $sql = "INSERT INTO tbalternativa (";
