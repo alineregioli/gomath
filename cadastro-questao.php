@@ -60,7 +60,7 @@
 						  </label>
 					  </div>
 					  <div class="form-group">
-					       <textarea class="form-control" id="campoAlternativa1" rows="3"></textarea>
+					       <textarea class="form-control" id="campoAlternativa1" name="campoAlternativa1"  rows="3"></textarea>
 					   </div>
 
 					<!-- alternativa 2 -->
@@ -71,7 +71,7 @@
 						  </label>
 					  </div>
 					  <div class="form-group">
-					       <textarea class="form-control" id="campoAlternativa2" rows="3"></textarea>
+					       <textarea class="form-control" id="campoAlternativa2" name="campoAlternativa2" rows="3"></textarea>
 					   </div>
 
 					  <!-- alternativa 3 -->
@@ -82,7 +82,7 @@
 						  </label>
 					  </div>
 					  <div class="form-group">
-					       <textarea class="form-control" id="campoAlternativa3" rows="3"></textarea>
+					       <textarea class="form-control" id="campoAlternativa3" name= "campoAlternativa3" rows="3"></textarea>
 					   </div>
 
 
@@ -94,7 +94,7 @@
 						  </label>
 					  </div>
 					  <div class="form-group">
-					       <textarea class="form-control" id="campoAlternativa4" rows="3"></textarea>
+					       <textarea class="form-control" id="campoAlternativa4" name= "campoAlternativa4" rows="3"></textarea>
 					   </div>
 
 

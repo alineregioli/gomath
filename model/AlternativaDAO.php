@@ -1,6 +1,6 @@
 <?php 
 
-Class QuestaoDAO{
+Class AlternativaDAO{
     
     private $alternativaTexto;
     private $alternativaCorreta;

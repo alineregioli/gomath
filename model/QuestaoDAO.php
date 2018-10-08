@@ -29,6 +29,21 @@ Class QuestaoDAO{
 
     }
 
+    public function maiorid($banco){
+        $sql = "select max(questaoId) from tbQuestao;";
+        //$result = mysql_query($query);
+         if ($result = $banco->conexao->query($sql) ) {
+            $fetch = mysql_fetch_row($result);
+            return $fetch[0];
+        } 
+        else {
+            throw new Exception("Error: " . $sql . "<br>" . $banco->conexao->error);
+        }
+
+        
+
+    }
+
 }
 
 
