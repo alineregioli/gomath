@@ -10,10 +10,6 @@ $senha = $_POST['senha'];
 
 $banco = new Banco();
 $banco->conectar();
-if($banco->logar($login,$senha)){
-	header('Location: ../problemas.php');
-}
-else{
-	header('Location: ../entrar.php');
-}
+$banco->logar($login,$senha);
+header('Location: ../');
 ?>

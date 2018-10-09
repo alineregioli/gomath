@@ -22,8 +22,11 @@ Class Banco{
 		$result = $this->conexao->query("SELECT * FROM `tbusuario` 
 	WHERE `usuarioEmail` = '$login' AND `usuarioSenha`= '$senha'");
 		if(mysqli_num_rows ($result) > 0 ){
+			$row = $result->fetch_assoc();
 			$_SESSION['login'] = $login;
-			$_SESSION['senha'] = $senha;
+			$_SESSION['nome'] = $row['usuarioNomeCompleto'];
+			$_SESSION['acesso'] = $row['TbEspecie_especieId'];
+			$result->close();
 			return true;
 		}
 		else{
