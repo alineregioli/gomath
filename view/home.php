@@ -27,7 +27,7 @@
 			 <div class="row">
 		 		<div class="col-md-4"></div>
 			 	<div class="col col-md-4 " >
-			 		<a class="btn btn-success btn-block" href="cadastrar.php" > Quero me cadastrar</a>
+			 		<a class="btn btn-success btn-block" href="cadastrar" > Quero me cadastrar</a>
 			 	</div>
 			 	<div class="col-md-4"></div>
 

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 	<head>
-		<title>Home</title>
+		<title>Cadastro de questão</title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<!-- Bootstrap 4-->
@@ -28,17 +28,17 @@
 
 					  <div class="form-group">
 					    <label for="nomeQuestao">Nome da Questão</label>
-					    <input type="text" class="form-control" id="nomeQuestao" name="nomeQuestao" >
+					    <input type="text" class="form-control" id="nomeQuestao" name="nomeQuestao" required>
 					  </div>
 
 					 <div class="form-group">
 					    <label for="assuntoQuestao">Assunto da Questão</label>
-					    <input type="text" class="form-control" id="assuntoQuestao" name="assuntoQuestao">
+					    <input type="text" class="form-control" id="assuntoQuestao" name="assuntoQuestao"required>
 					  </div>
 
 					  <div class="form-group">
 					    <label for="dificuldadeQuestao">Dificuldade da Questão</label>
-					      <select id="dificuldadeQuestao" name="dificuldadeQuestao" class="form-control">
+					      <select id="dificuldadeQuestao" name="dificuldadeQuestao" class="form-control" required>
 					        <option value ="1" >1 - Fácil</option>
 					        <option value ="2" >2 - Médio</option>
 					        <option value ="3" >3 - Difícil</option>
@@ -47,14 +47,14 @@
 
 					  <div class="form-group">
 					    <label for="enunciadoQuestao">Enunciado da questão</label>
-					    <textarea class="form-control" id="enunciadoQuestao" name="enunciadoQuestao" rows="5"></textarea>
+					    <textarea class="form-control" id="enunciadoQuestao" name="enunciadoQuestao" rows="5" required></textarea>
 					  </div>
 
 					  <h3> Alternativas</h3>
 
 					<!-- alternativa 1 -->
 					  <div class="form-check">
-						  <input class="form-check-input" type="radio" name="alternativa" id="alternativa1" value="1" >
+						  <input class="form-check-input" type="radio" name="alternativa" id="alternativa1" value="1" checked>
 						  <label class="form-check-label" for="alternativa1">
 						   	Alternativa 1
 						  </label>
@@ -101,7 +101,7 @@
 
 					 <div class="form-group">
 					    <label for="paraSalvar">Dados a salvar na submissão</label>
-					    <textarea class="form-control" id="paraSalvar" name="paraSalvar" rows="2"></textarea>
+					    <textarea class="form-control" id="paraSalvar" name="paraSalvar" rows="2" required></textarea>
 					  </div>
 
 

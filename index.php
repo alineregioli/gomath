@@ -8,7 +8,14 @@ switch ($_GET['rota']) {
 	case 'entrar':
 		include 'view/entrar.php';
 		break;
+	case 'cadastrar':
+		include 'view/cadastrar.php';
+		break;
+	case 'cadastro-questao':
+		include 'view/cadastro-questao.php';
+		break;
 	
+
 	default:
 		if(!isset($_SESSION['nome']) || empty($_SESSION['nome'])){
 			include 'view/home.php';

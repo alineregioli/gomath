@@ -1,6 +1,7 @@
 <?php 
 
 require_once('Comum.php');
+
 Class Alternativa extends Comum{
     
     protected $alternativaTexto;
@@ -8,7 +9,6 @@ Class Alternativa extends Comum{
  	protected $TbQuestao_questaoId;
 
     public function __construct(){
-    	$alternativaCorreta = 0;
     }
 
 

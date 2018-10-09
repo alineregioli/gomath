@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 	<head>
-		<title>Home</title>
+		
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<!-- Bootstrap 4-->
@@ -14,7 +14,6 @@
 
 		<?php 
 			session_start();
-
 
 		 ?>
 		<nav class="navbar navbar-expand-lg navbar-light bg-info">

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 	<head>
-		<title>Home</title>
+		<title>Entrar</title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<!-- Bootstrap 4-->
@@ -25,11 +25,11 @@
 					
 						<div class="form-group">
 							<label for="email" class="mb-0">Email</label>
-							<input type="email" class="form-control" id="email" name="email" placeholder="maria@email.com">
+							<input type="email" class="form-control" id="email" name="email" placeholder="maria@email.com"  required>
 						</div>
 						<div class="form-group">
 							<label for="senha" class="mb-0">Senha</label>
-							<input type="password" class="form-control" id="senha" name="senha"placeholder="*******">
+							<input type="password" class="form-control" id="senha" name="senha"placeholder="*******" required>
 						</div>
 																		
 						<button type="submit" class="btn btn-primary  btn-block centro"   >Entrar</button>
