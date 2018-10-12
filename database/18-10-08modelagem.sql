@@ -154,8 +154,6 @@ CREATE TABLE IF NOT EXISTS `bancotcc`.`TbQuestaoModulo` (
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
-insert into tbespecie (especieNome) values ('administrador'), ('aluno');
-
 
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;

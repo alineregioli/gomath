@@ -15,6 +15,11 @@
 			require_once('header.php');
 		 ?>
 
+		 <?php
+			if(!isset($_SESSION['acesso']) || $_SESSION['acesso'] != 1){//nao é adm = sai
+				header('Location: problemas');
+			}
+		?>
 		<!-- Campo registrar -->
 		<div class="container " style="background:transparent; margin-top: 10px;">
 			<div class="row" >
@@ -109,7 +114,7 @@
 					  	<div class="row">
 					  		<div class="col-md-2"></div>
 					  		<div class="col-md-3">
-					  			<button type="submit" class="btn btn-primary">Cancelar</button>
+					  			<a href="questoes" class="btn btn-primary"> CANCELAR</a>
 					  		</div>
 					  		<div class="col-md-2"></div>
 					  		<div class="col-md-3">

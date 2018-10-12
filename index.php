@@ -21,7 +21,7 @@ switch ($_GET['rota']) {
 			include 'view/home.php';
 		}
 		else{
-			include 'view/problemas.php'; 
+			include 'view/questoes.php'; 
 		}
 		break;
 }
