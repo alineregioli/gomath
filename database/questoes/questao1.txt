@@ -1,0 +1,34 @@
+Chefe, Tesoureiro e Secretário
+
+Princípio Fundamental de Contagem , PFC
+
+1
+
+$c = rand(5, 15); 
+$t = rand(5, 15);
+$s = rand(5, 15);
+De quantas maneiras podemos escolher um chefe, um tesoureiro e um secretário para um clube, sendo que há $c candidatos a chefe, $t candidatos a tesoureiro e $s candidatos a secretário?
+
+$c*$t*$c maneiras
+
+$c*$t*$c-2 maneiras
+
+($c*$t*$c)/2 maneiras
+
+$c*$t*($c-2) maneiras
+
+c = $c, t = $t, s = $s
+
+
+INSERT INTO tbquestao (questaoNome, questaoAssunto, questaoDificuldade, questaoDescricao, questaoDados) VALUES ('Chefe, Tesoureiro e Secretário', 'Princípio Fundamental de Contagem , PFC', 1, '$c = rand(5, 15); 
+$t = rand(5, 15);
+$s = rand(5, 15);
+De quantas maneiras podemos escolher um chefe, um tesoureiro e um secretário para um clube, sendo que há $c candidatos a chefe, $t candidatos a tesoureiro e $s candidatos a secretário?', 'c = $c, t = $t, s = $s');
+
+INSERT INTO tbalternativa (alternativaTexto, alternativacorreta, TbQuestao_questaoId) VALUES ('$c*$t*$c maneiras', 1, (select max(questaoId) as maior from tbQuestao) );
+
+INSERT INTO tbalternativa (alternativaTexto, alternativacorreta, TbQuestao_questaoId) VALUES ('$c*$t*$c-2 maneiras', 0, (select max(questaoId) as maior from tbQuestao) );
+
+INSERT INTO tbalternativa (alternativaTexto, alternativacorreta, TbQuestao_questaoId) VALUES ('($c*$t*$c)/2 maneiras', 0, (select max(questaoId) as maior from tbQuestao) );
+
+INSERT INTO tbalternativa (alternativaTexto, alternativacorreta, TbQuestao_questaoId) VALUES ('$c*$t*($c-2) maneiras', 0, (select max(questaoId) as maior from tbQuestao) );

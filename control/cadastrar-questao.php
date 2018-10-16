@@ -37,26 +37,26 @@ try{
 	//alternativa1 :  depois fazer outras
 	$alternativa1 =  new Alternativa();
 	$alternativa1->__set('alternativaTexto', $_POST['campoAlternativa1']);
-    $alternativa1->__set('alternativaCorreta', ($_POST['alternativa'] == 1) ? 1: 0);
-    $alternativa1->__set('TbQuestao_questaoId', $idQuestao);
+    $alternativa1->__set('TbQuestao_questaoId', $idQuestao);    
+    $alternativa1->__set('alternativaCorreta', 1);
     $AlternativaDAO->inserir($banco,$alternativa1);
 
     $alternativa2 =  new Alternativa();
 	$alternativa2->__set('alternativaTexto', $_POST['campoAlternativa2']);
-    $alternativa2->__set('alternativaCorreta', ($_POST['alternativa'] == 2) ? 1: 0);
     $alternativa2->__set('TbQuestao_questaoId', $idQuestao);
+    $alternativa2->__set('alternativaCorreta', 0);
     $AlternativaDAO->inserir($banco,$alternativa2);
 
     $alternativa3 =  new Alternativa();
 	$alternativa3->__set('alternativaTexto', $_POST['campoAlternativa3']);
-    $alternativa3->__set('alternativaCorreta', ($_POST['alternativa'] == 3) ? 1: 0);
     $alternativa3->__set('TbQuestao_questaoId', $idQuestao);
+    $alternativa3->__set('alternativaCorreta', 0);
     $AlternativaDAO->inserir($banco,$alternativa3);
 
     $alternativa4 =  new Alternativa();
 	$alternativa4->__set('alternativaTexto', $_POST['campoAlternativa4']);
-    $alternativa4->__set('alternativaCorreta', ($_POST['alternativa'] == 4) ? 1: 0);
     $alternativa4->__set('TbQuestao_questaoId', $idQuestao);
+    $alternativa4->__set('alternativaCorreta', 0);
     $AlternativaDAO->inserir($banco,$alternativa4);
 
 

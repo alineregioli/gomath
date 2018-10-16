@@ -58,46 +58,26 @@
 					  <h3> Alternativas</h3>
 
 					<!-- alternativa 1 -->
-					  <div class="form-check">
-						  <input class="form-check-input" type="radio" name="alternativa" id="alternativa1" value="1" checked>
-						  <label class="form-check-label" for="alternativa1">
-						   	Alternativa 1
-						  </label>
-					  </div>
+					<p> <b>ALTERNATIVA 1 (correta)</b></p>
 					  <div class="form-group">
 					       <textarea class="form-control" id="campoAlternativa1" name="campoAlternativa1"  rows="3"></textarea>
 					   </div>
 
 					<!-- alternativa 2 -->
-					  <div class="form-check">
-						  <input class="form-check-input" type="radio" name="alternativa" id="alternativa2" value="2" >
-						  <label class="form-check-label" for="alternativa2">
-						   	Alternativa 2
-						  </label>
-					  </div>
+					  <p> <b>ALTERNATIVA 2</b></p>
 					  <div class="form-group">
 					       <textarea class="form-control" id="campoAlternativa2" name="campoAlternativa2" rows="3"></textarea>
 					   </div>
 
 					  <!-- alternativa 3 -->
-					  <div class="form-check">
-						  <input class="form-check-input" type="radio" name="alternativa" id="alternativa3" value="3" >
-						  <label class="form-check-label" for="alternativa3">
-						   	Alternativa 3
-						  </label>
-					  </div>
+					  <p> <b>ALTERNATIVA 3</b></p>
 					  <div class="form-group">
 					       <textarea class="form-control" id="campoAlternativa3" name= "campoAlternativa3" rows="3"></textarea>
 					   </div>
 
 
 					  <!-- alternativa 4 -->
-					  <div class="form-check">
-						  <input class="form-check-input" type="radio" name="alternativa" id="alternativa4" value="4" >
-						  <label class="form-check-label" for="alternativa4">
-						   	Alternativa 4
-						  </label>
-					  </div>
+					 <p> <b>ALTERNATIVA 4</b></p>
 					  <div class="form-group">
 					       <textarea class="form-control" id="campoAlternativa4" name= "campoAlternativa4" rows="3"></textarea>
 					   </div>

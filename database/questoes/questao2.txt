@@ -1,0 +1,33 @@
+Tripulação
+
+Princípio Fundamental de Contagem , PFC
+
+1
+
+$h =  rand(5, 15); 
+De quantas maneiras podemos escolher um capitão, um imediato e um cozinheiro de bordo de uma tripulação composta por $h homens?
+
+$h*($h-1)*($h-2) maneiras
+
+$h*($h)*($h) maneiras
+
+$h*($h)*($h-2) maneiras
+
+$h*($h-1)*($h+2) maneiras
+
+h = $h 
+
+
+INSERT INTO tbquestao (questaoNome, questaoAssunto, questaoDificuldade, questaoDescricao, questaoDados) VALUES ('Tripulação', '
+Princípio Fundamental de Contagem , PFC', 1, '$h =  rand(5, 15); 
+De quantas maneiras podemos escolher um capitão, um imediato e um cozinheiro de bordo de uma tripulação composta por $h homens?
+', 'h = $h ');
+
+INSERT INTO tbalternativa (alternativaTexto, alternativacorreta, TbQuestao_questaoId) VALUES ('$h*($h-1)*($h-2) maneiras', 1, (select max(questaoId) as maior from tbQuestao) );
+
+INSERT INTO tbalternativa (alternativaTexto, alternativacorreta, TbQuestao_questaoId) VALUES ('$h*($h)*($h) maneiras', 0, (select max(questaoId) as maior from tbQuestao) );
+
+INSERT INTO tbalternativa (alternativaTexto, alternativacorreta, TbQuestao_questaoId) VALUES ('$h*($h)*($h-2) maneiras
+', 0, (select max(questaoId) as maior from tbQuestao) );
+
+INSERT INTO tbalternativa (alternativaTexto, alternativacorreta, TbQuestao_questaoId) VALUES ('$h*($h-1)*($h+2) maneiras', 0, (select max(questaoId) as maior from tbQuestao) );

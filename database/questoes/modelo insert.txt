@@ -1,0 +1,9 @@
+INSERT INTO tbquestao (questaoNome, questaoAssunto, questaoDificuldade, questaoDescricao, questaoDados) VALUES ('', '', 1, '', '');
+
+INSERT INTO tbalternativa (alternativaTexto, alternativacorreta, TbQuestao_questaoId) VALUES ('', 1, (select max(questaoId) as maior from tbQuestao) );
+
+INSERT INTO tbalternativa (alternativaTexto, alternativacorreta, TbQuestao_questaoId) VALUES ('', 0, (select max(questaoId) as maior from tbQuestao) );
+
+INSERT INTO tbalternativa (alternativaTexto, alternativacorreta, TbQuestao_questaoId) VALUES ('', 0, (select max(questaoId) as maior from tbQuestao) );
+
+INSERT INTO tbalternativa (alternativaTexto, alternativacorreta, TbQuestao_questaoId) VALUES ('', 0, (select max(questaoId) as maior from tbQuestao) );

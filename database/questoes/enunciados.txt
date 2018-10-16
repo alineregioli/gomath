@@ -1,0 +1,21 @@
+PFC
+
+http://clubes.obmep.org.br/blog/pfc-generalizacao/
+De quantas maneiras podemos escolher um chefe, um tesoureiro e um secretário para um clube, sendo que há 10 candidatos a chefe, 20 candidatos a tesoureiro e 30 candidatos a secretário?
+
+R = 10*20*30
+
+
+De quantas maneiras podemos escolher um capitão, um imediato e um cozinheiro de bordo de uma tripulação composta por 15 homens?
+R = 15*14*13
+
+
+https://exercicios.brasilescola.uol.com.br/exercicios-matematica/exercicios-sobre-fatorial-principio-fundamental-contagem.htm#resp-5
+
+Um casal e seus 4 filhos vão ser colocados lado a lado para tirar uma foto. Se todos os filhos devem ficar entre os pais, de quantos modos distintos os seis podem posar para tirar a foto?
+
+R= 2 *4!
+
+Newton possui 9 livros distintos, sendo 4 de Geometria, 2 de Álgebra e 3 de Análise. O número de maneiras pelas quais Newton pode arrumar esses livros em uma estante, de forma que os livros de mesmo assunto permaneçam juntos, é:
+
+R = 3! * 4! * 2! * 3!
