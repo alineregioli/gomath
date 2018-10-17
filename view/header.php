@@ -18,7 +18,7 @@
 		 ?>
 		<nav class="navbar navbar-expand-lg navbar-light bg-info">
 			<div class="container">
-				<a class=" gomath " href="home.php">GoMath</a> <!-- marca -->
+				<a class=" gomath " href="">GoMath</a> <!-- marca -->
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 				</button>

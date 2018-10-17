@@ -29,6 +29,21 @@ Class QuestaoDAO{
 
     }
 
+    public function retornarQuestoes($banco){
+        $sql = "SELECT questaoNome as nome, questaoDificuldade as nivel, questaoAssunto as assunto FROM tbquestao;";
+        $result = $banco->conexao->query($sql);
+        if(mysqli_num_rows ($result) > 0){
+            $questoes = array();
+            while($row = $result->fetch_assoc()){
+                $questoes[] = $row;
+            }
+            return $questoes;
+        }
+        else{
+            return array();
+        }
+    }
+
     public function maiorid($banco){
         
         $sql = "select max(questaoId) as maior from tbQuestao;";
@@ -41,13 +56,6 @@ Class QuestaoDAO{
         else {
             throw new Exception("Error: " . $sql . "<br>" . $banco->conexao->error);
         }
-
-        
-
-
-      
-
-
     }
 
 }

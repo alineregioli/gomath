@@ -11,9 +11,6 @@
 	<body>
 		
 		
-		<?php 
-			require_once('header.php');
-		 ?>
 
 		<!-- Campo registrar -->
 		<div class="container" style="background:white; margin-top: 10px;">
