@@ -30,8 +30,10 @@ Class QuestaoDAO{
     }
 
     public function retornarQuestoes($banco){
-        $sql = "SELECT questaoNome as nome, questaoDificuldade as nivel, questaoAssunto as assunto FROM tbquestao;";
+        $sql = "SELECT questaoId as id,
+questaoNome as nome, questaoDificuldade as nivel, questaoAssunto as assunto FROM tbquestao;";
         $result = $banco->conexao->query($sql);
+        header('Content-type: text/html; charset=utf-8');
         if(mysqli_num_rows ($result) > 0){
             $questoes = array();
             while($row = $result->fetch_assoc()){

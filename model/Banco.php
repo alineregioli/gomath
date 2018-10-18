@@ -14,6 +14,8 @@ Class Banco{
 
 	public function conectar(){
 		$this->conexao = mysqli_connect($this->servername, $this->username, $this->password,$this->database);
+		$this->conexao->set_charset('utf8');
+		$this->conexao->query("SET collation_connection = utf8_general_ci");
 	    return $this->conexao;
 	}
 

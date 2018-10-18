@@ -21,11 +21,11 @@ switch ($_GET['rota']) {
 			include 'view/home.php';
 		}
 		else{
-			header('Location: control/questoes.php');
+			//header('Location: control/questoes.php');
 			//$_POST['page']
 
 			
-			//include 'view/questoes.php'; 
+			include 'view/questoes.php'; 
 		}
 		break;
 }

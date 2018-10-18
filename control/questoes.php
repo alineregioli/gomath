@@ -6,8 +6,12 @@ require_once('../model/QuestaoDAO.php');
 require_once('../model/Alternativa.php');
 require_once('../model/AlternativaDAO.php');
 
+$paginacao = 1;
+$atual = intval($_POST['page']);
 $banco = new Banco();
 $banco->conectar();
-
-echo '<pre>';
-var_dump(QuestaoDAO::retornarQuestoes($banco));
+$questoes = QuestaoDAO::retornarQuestoes($banco);
+$total = intval(count($questoes)/$paginacao);
+$questoes = array_slice($questoes, $paginacao*$atual,$paginacao);
+$questoes[] = $total;
+echo json_encode($questoes);

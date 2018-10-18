@@ -1,14 +1,4 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-	<head>
-		<title>Questões</title>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<!-- Bootstrap 4-->
-		<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
-		<link href="css/estilo.css" rel="stylesheet">
-	</head>
-	<body>
+
 		
 		
 
@@ -18,6 +8,14 @@
 				<div class="col-md-12 centro" style="margin-top: 10px;">
 					
 					<?php
+						$page = 0;
+						$ant = 0;
+						if(!empty($_GET['rota'])){
+							$page = intval($_GET['rota']);
+						}
+						
+					
+
 						if(isset($_SESSION['acesso']) && $_SESSION['acesso'] == 1){//é administrador
 					
 						echo '<a class="btn btn-success float-right" href="cadastro-questao" role="button">CADASTRAR PROBLEMA</a>
@@ -25,6 +23,8 @@
 						<br><br>';
 						}
 					?>
+
+					<input type="hidden" id="page" name="page" value="<?php echo $page;?>">
 
 					<table class="table table-striped table-sm table-hover ">
 						<thead class="thead-dark">
@@ -38,34 +38,19 @@
 						      <th scope="col" class="w-5">Nível</th>
 						    </tr>
 						</thead>
-						<tbody>
-						    <tr>
-						      <td>1</td>
-						      <td>v</td>
-						      <td>Maçã</td>
-						      <td>PFC</td>
-						      <td>2</td>
-						      <td>1</td>
-						    </tr>
-
-						    <tr>
-						      <td>1</td>
-						      <td>v</td>
-						      <td>Maçã</td>
-						      <td>PFC</td>
-						      <td>2</td>
-						      <td>1</td>
-						    </tr>
+						<tbody id="problemas">
+				
 						    
 						</tbody>
 					</table>
 					<nav >
 					  <ul class="pagination justify-content-center">
-					    <li class="page-item disabled">
-					      <a class="page-link" href="#" tabindex="-1">Anterior</a>
+					  	
+					    <li class="page-item <?php echo ($page == 0)?'disabled':''; ?>">
+					      <a class="page-link" href="<?php echo $page-1; ?>" tabindex="-1">Anterior</a>
 					    </li>
-					    <li class="page-item">
-					      <a class="page-link" href="#">Próximo</a>
+					    <li class="page-item" id="next">
+					      <a class="page-link" href="<?php echo $page+1;?>">Próximo</a>
 					    </li>
 					  </ul>
 					</nav>
@@ -73,8 +58,4 @@
 			</div>
 		</div>
 		<!-- rodapé -->
-		 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
-		<script src="bootstrap/js/bootstrap.min.js"></script>
-	</body>
-</html>
+		<script src="js/ajaxquestoes.js"></script>

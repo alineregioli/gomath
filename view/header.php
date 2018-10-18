@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 	<head>
-		
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<!-- Bootstrap 4-->
 		<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
 		<link href="css/estilo.css" rel="stylesheet">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>s
 	</head>
 	<body>
 		
