@@ -14,6 +14,9 @@ switch ($_GET['rota']) {
 	case 'cadastro-questao':
 		include 'view/cadastro-questao.php';
 		break;
+	case 'ver-questao':
+		include 'view/ver-questao.php';
+		break;
 	
 
 	default:

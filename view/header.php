@@ -6,12 +6,11 @@
 		<!-- Bootstrap 4-->
 		<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
 		<link href="css/estilo.css" rel="stylesheet">
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>s
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	</head>
 	<body>
 		
 		<!-- Barra de navegação -->
-
 		<?php 
 			session_start();
 
