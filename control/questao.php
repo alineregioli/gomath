@@ -19,5 +19,6 @@ foreach ($alternativas as $key => $value) {
 	eval("\$str = \"$str\";");
 	$alternativas[$key]['texto'] = $str;
 }
+shuffle($alternativas);
 $result = array('questao' => $questao, 'alternativas' => $alternativas);
 echo json_encode($result);
