@@ -11,7 +11,9 @@
 	<body>
 		
 		
-		<?php 
+		<?php
+			$matches = array();
+			preg_match('([0-9]+)', $_SERVER['REQUEST_URI'], $matches);
 			require_once('header.php');
 		 ?>
 
@@ -20,57 +22,26 @@
 				header('Location: problemas');
 			}
 		?>
-
-
+			
+		<input type="hidden" id="idquestao" name="idquestao" value="<?php echo $matches[0];?>">
 
 		<div class="container" style="background:white; margin-top: 10px;">
 			<div class="row" >
 				<div class="col-md-12 centro" style="margin-top: 10px;">
 					
 					
-					<h3 class="text-center">0001 - João e Maria  </h3>
-					<h5 class="text-center"> Nível 1 </h5>
+					<h3 class="text-center" id="titulo"></h3>
+					<h5 class="text-center" id = "nivel"></h5>
 
 					<div class="enunciado">
-						
-					
-					<p>
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eget mauris non tellus placerat suscipit id ac tortor. Pellentesque eleifend consectetur malesuada. Vivamus et quam ut odio aliquet pellentesque eu nec est. Curabitur quis mauris at nunc volutpat bibendum. Nunc elementum mauris eu scelerisque tempor. Donec vitae accumsan erat. Etiam venenatis eu eros at placerat. Integer feugiat nisl tristique nulla vehicula, vestibulum sagittis libero cursus. Nulla a porttitor quam. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Vestibulum eu tempus sem, vel gravida quam. Aliquam placerat faucibus elit, ac cursus augue tempor et.</p>
-					<p>
-
-					Suspendisse malesuada maximus sodales. Aliquam malesuada dui non ultrices facilisis. Donec fringilla in tortor a consectetur. Proin congue justo at risus eleifend pharetra. Etiam euismod aliquet lacus, congue scelerisque massa eleifend nec. Vestibulum condimentum fringilla leo imperdiet scelerisque. Phasellus convallis tellus eget libero tristique, vel sagittis elit consectetur.</p>
-
-
 
 					</div>
 
 					<div class="assunto">
-						<p> princípio fundamental de contagem </p>
+						<p></p>
 					</div>
 
-					<div>
-						
-						<div class="custom-control custom-radio">
-						  <input type="radio" id="alternativa1" name="alternativa" class="custom-control-input" checked value="1">
-						  <label class="custom-control-label" for="alternativa1">texto alternativa 1</label>
-						</div>
-
-						<div class="custom-control custom-radio">
-						  <input type="radio" id="alternativa2" name="alternativa" class="custom-control-input"  value="2">
-						  <label class="custom-control-label" for="alternativa2">texto alternativa 2</label>
-						</div>
-
-						<div class="custom-control custom-radio">
-						  <input type="radio" id="alternativa3" name="alternativa" class="custom-control-input"  value="3">
-						  <label class="custom-control-label" for="alternativa3">texto alternativa 3</label>
-						</div>
-
-						<div class="custom-control custom-radio">
-						  <input type="radio" id="alternativa4" name="alternativa" class="custom-control-input"  value="4">
-						  <label class="custom-control-label" for="alternativa4">texto alternativa 4</label>
-						</div>
-						
-
+					<div class="alternativas">
 					</div>
 
 
@@ -93,10 +64,4 @@
 				</div>
 			</div>
 		</div>
-		<!-- rodapé -->
-		<script src="js/ajaxquestoes.js"></script>
-		 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
-		<script src="bootstrap/js/bootstrap.min.js"></script>
-	</body>
-</html>
+		<script src="js/ajaxquestao.js"></script>

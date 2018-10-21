@@ -29,11 +29,23 @@ Class QuestaoDAO{
 
     }
 
+    public function retornarQuestao($banco,$id){
+        $sql = "SELECT questaoId as id,
+questaoNome as nome, questaoDificuldade as nivel, questaoAssunto as assunto, questaoDescricao as descricao, questaoDados as dados FROM tbquestao WHERE questaoId = $id;";
+        $result = $banco->conexao->query($sql);
+        if(mysqli_num_rows ($result) > 0){
+            $questoes = array();
+            return $row = $result->fetch_assoc();
+        }
+        else{
+            return array();
+        }
+    }
+
     public function retornarQuestoes($banco){
         $sql = "SELECT questaoId as id,
 questaoNome as nome, questaoDificuldade as nivel, questaoAssunto as assunto FROM tbquestao;";
         $result = $banco->conexao->query($sql);
-        header('Content-type: text/html; charset=utf-8');
         if(mysqli_num_rows ($result) > 0){
             $questoes = array();
             while($row = $result->fetch_assoc()){

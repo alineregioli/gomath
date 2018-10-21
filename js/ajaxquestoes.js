@@ -9,7 +9,7 @@ jQuery(document).ready(function($){
         success: function(response) {
         	n = response.length
         	for (var i = 0; i < n-1; i++) {
-        		$("#problemas").append("<tr id="+i+">");
+        		$("#problemas").append("<tr class='clickable-row' onclick=' window.location = $(this).data(\"href\");' data-href='ver-questao?id="+response[i].id+"' id="+i+">");
         		$("#"+i).append("<td>"+response[i].id+"</td>");
         		$("#"+i).append("<td>v</td>");
         		$("#"+i).append("<td>"+response[i].nome+"</td>");
@@ -18,12 +18,15 @@ jQuery(document).ready(function($){
         		$("#"+i).append("<td>"+response[i].nivel+"</td>");
 			}
 			if(dados == response[n-1]-1){
-				console.log("here");
 				$("#next").addClass('disabled');
 			}
         	//$("#problemas").append()
-        	console.log(response);
+        	$('.clickable-row').css( 'cursor', 'pointer' );
         }
      });
+	$(".clickable-row").click(function() {
+    	console.log("hi");
+        window.location = $(this).data("href");
+    });
 });
 

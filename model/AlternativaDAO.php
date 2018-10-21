@@ -27,6 +27,21 @@ Class AlternativaDAO{
 
     }
 
+    public function retornarAlternativasQuestao($banco,$id){
+        $sql = "SELECT alternativaId as id, alternativaTexto as texto FROM tbalternativa WHERE TbQuestao_questaoId = $id;";
+        $result = $banco->conexao->query($sql);
+        if(mysqli_num_rows ($result) > 0){
+            $questoes = array();
+            while($row = $result->fetch_assoc()){
+                $questoes[] = $row;
+            }
+            return $questoes;
+        }
+        else{
+            return array();
+        }
+    }
+
 }
 
 
