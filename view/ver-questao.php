@@ -22,8 +22,6 @@
 				header('Location: problemas');
 			}
 		?>
-			
-		<input type="hidden" id="idquestao" name="idquestao" value="<?php echo $matches[0];?>">
 
 		<div class="container" style="background:white; margin-top: 10px;">
 			<div class="row" >
@@ -41,8 +39,10 @@
 						<p></p>
 					</div>
 
-					<div class="alternativas">
-					</div>
+					<form class="alternativas" action="control/submissao.php" method="POST">
+					
+
+					<input type="hidden" id="idquestao" name="idquestao" value="<?php echo $matches[0];?>">
 
 
 
@@ -61,6 +61,7 @@
 					  	</div>
 					  
 					</div>
+					</form>
 				</div>
 			</div>
 		</div>

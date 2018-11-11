@@ -26,6 +26,7 @@ Class Banco{
 		if(mysqli_num_rows ($result) > 0 ){
 			$row = $result->fetch_assoc();
 			$_SESSION['login'] = $login;
+			$_SESSION['id'] = $row['usuarioId'];
 			$_SESSION['nome'] = $row['usuarioNomeCompleto'];
 			$_SESSION['acesso'] = $row['TbEspecie_especieId'];
 			$result->close();
