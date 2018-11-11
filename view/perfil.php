@@ -1,20 +1,17 @@
 
-		
-		
 
-		<!-- Campo registrar -->
 		<div class="container" style="background:white; margin-top: 10px;">
 			<div class="row" >
 				<div class="col-md-12 centro" style="margin-top: 10px;">
-					
+					<h1 class="text-center">Perfil</h1>
 					<label>Nome:</label> <?php echo $_SESSION["nome"]; ?><br>
-					<label>Posição:</label><br>
-					<label>Resolvido:</label><br>
-					<label>Tentado:</label><br>
+					<label id="pos">Posição:</label> <br>
+					<label id="res">Resolvidos:</label><br>
+					<label id="ten">Tentados:</label><br>
 
 
 					<input type="hidden" id="page" name="page" value="0">
-					<input type="hidden" id="page" name="page" value="<?php echo $_SESSION["id"]; ?>">
+					<input type="hidden" id="user" name="user" value="<?php echo $_SESSION["id"]; ?>">
 					<h1 class="text-center">Submissões</h1>
 					<table class="table table-striped table-sm table-hover ">
 						<thead class="thead-dark">

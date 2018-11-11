@@ -18,9 +18,7 @@
 		 ?>
 
 		 <?php
-			if(!isset($_SESSION['acesso']) || $_SESSION['acesso'] != 1){//nao é adm = sai
-				header('Location: problemas');
-			}
+
 		?>
 
 		<div class="container" style="background:white; margin-top: 10px;">

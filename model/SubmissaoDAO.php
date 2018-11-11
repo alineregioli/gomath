@@ -22,10 +22,10 @@ Class SubmissaoDAO{
 
     }
     public function tentados($banco,$id){
-        $sql = "SELECT COUNT( DISTINCT(TbQuestao_questaoId) ) FROM tbsubmissao WHERE TbUsuario_usuarioId = $id;";
+        $sql = "SELECT COUNT( DISTINCT(TbQuestao_questaoId) ) as tentados FROM tbsubmissao WHERE TbUsuario_usuarioId = $id;";
          $result = $banco->conexao->query($sql);
         if(mysqli_num_rows ($result) > 0){
-            return $result->fetch_assoc()
+            return $result->fetch_assoc();
         }
         else{
             return array();
@@ -33,14 +33,14 @@ Class SubmissaoDAO{
     }
 
     public function resolvidos($banco,$id){
-        $sql = "SELECT COUNT( DISTINCT(tbsubmissao.TbQuestao_questaoId) ) 
+        $sql = "SELECT COUNT( DISTINCT(tbsubmissao.TbQuestao_questaoId) ) as resolvidos
                 FROM tbsubmissao
                 INNER JOIN tbalternativa ON tbalternativa.alternativaId = tbsubmissao.TbAlternativa_alternativaId
                 WHERE tbalternativa.alternativacorreta = 1
                 AND tbsubmissao.TbUsuario_usuarioId = $id;";
          $result = $banco->conexao->query($sql);
         if(mysqli_num_rows ($result) > 0){
-            return $result->fetch_assoc()
+            return $result->fetch_assoc();
         }
         else{
             return array();
