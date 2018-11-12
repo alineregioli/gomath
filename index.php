@@ -20,6 +20,9 @@ switch ($_GET['rota']) {
 	case 'perfil':
 		include 'view/perfil.php';
 		break;
+	case 'ranking':
+		include 'view/ranking.php';
+		break;
 	
 
 	default:

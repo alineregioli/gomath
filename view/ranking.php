@@ -3,28 +3,20 @@
 		<div class="container" style="background:white; margin-top: 10px;">
 			<div class="row" >
 				<div class="col-md-12 centro" style="margin-top: 10px;">
-					<h1 class="text-center">Perfil</h1>
-					<label>Nome:</label> <?php echo $_SESSION["nome"]; ?><br>
-					<label id="pos">Posição:</label> <br>
-					<label id="res">Resolvidos:</label><br>
-					<label id="ten">Tentados:</label><br>
-
-
+					<h1 class="text-center">Ranking</h1>
 					<input type="hidden" id="page" name="page" value="1">
 					<input type="hidden" id="limit" name="limit" value="2">
 					<input type="hidden" id="user" name="user" value="<?php echo $_SESSION["id"]; ?>">
-					<h1 class="text-center">Submissões</h1>
 					<table class="table table-striped table-sm table-hover ">
 						<thead class="thead-dark">
 							
 						    <tr>
-						      <th scope="col" class="w-20">ID</th>
-						      <th scope="col" class="w-10">Data</th>
+						      <th scope="col" class="w-20">Posição</th>
 						      <th scope="col" class="w-30">Nome</th>
-						      <th scope="col" class="w-10">Veredito</th>
+						      <th scope="col" class="w-10">Resolvidos</th>
 						    </tr>
 						</thead>
-						<tbody id="submissoes">
+						<tbody id="ranking">
 				
 						    
 						</tbody>
@@ -44,4 +36,4 @@
 			</div>
 		</div>
 		<!-- rodapé -->
-		<script src="js/ajaxperfil.js"></script>
+		<script src="js/ajaxranking.js"></script>
