@@ -22,6 +22,9 @@ jQuery(document).ready(function($){
 			}
         	//$("#problemas").append()
         	$('.clickable-row').css( 'cursor', 'pointer' );
+        },
+        error: function(response){
+            console.log(response);
         }
      });
 	$(".clickable-row").click(function() {

@@ -26,6 +26,9 @@ jQuery(document).ready(function($){
 			}
 			
             console.log(response);
+        },
+        error: function(response){
+            console.log(response);
         }
      });
 });
