@@ -20,6 +20,7 @@ jQuery(document).ready(function($){
                 $("#ranking").append("<tr class='clickable-row' id="+i+">");
                 $("#"+i).append("<td>"+(i+1)+"</td>");
                 $("#"+i).append("<td>"+response[i].nome+"</td>");
+                $("#"+i).append("<td>"+response[i].pontos+"</td>");
                 $("#"+i).append("<td>"+response[i].resolvidos+"</td>");
                
             }
@@ -74,6 +75,7 @@ jQuery(document).ready(function($){
                 $("#ranking").append("<tr class='clickable-row' id="+i+">");
                 $("#"+i).append("<td>"+((page-1)*limit+i+1)+"</td>");
                 $("#"+i).append("<td>"+response[i].nome+"</td>");
+                $("#"+i).append("<td>"+response[i].pontos+"</td>");
                 $("#"+i).append("<td>"+response[i].resolvidos+"</td>");
                
             }

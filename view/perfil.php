@@ -6,6 +6,7 @@
 					<h1 class="text-center">Perfil</h1>
 					<label>Nome:</label> <?php echo $_SESSION["nome"]; ?><br>
 					<label id="pos">Posição:</label> <br>
+					<label id="pon">Pontos:</label> <br>
 					<label id="res">Resolvidos:</label><br>
 					<label id="ten">Tentados:</label><br>
 

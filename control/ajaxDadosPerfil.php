@@ -17,10 +17,12 @@ $pos = count($ranking)+1;
 foreach ($ranking as $key => $value) {
 	if($value['id'] == $_POST['id']){
 		$pos = $key+1;
+		$pontos = $value['pontos'];
 		break;
 	}
 }
 $data[] = intval(count($data[2]));
 $data[] = intval($pos);
+$data[] = intval($pontos);
 $data[2] = array_slice($data[2], $_POST['limit']*$_POST['page'],$_POST['limit']);
 echo json_encode($data);

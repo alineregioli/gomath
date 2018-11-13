@@ -21,18 +21,12 @@ var_dump($Questao->__attributes());
 $QuestaoDAO = new QuestaoDAO();
 
 try{
-	$QuestaoDAO->inserir($banco,$Questao);
+	$idQuestao = $QuestaoDAO->inserir($banco,$Questao);
 	//inserir alternativas
 	// criar 4 alternativas. e colocar 1 na correta
 
 	//pegar id da ultima questão criada
 	//select max(questaoId) from tbQuestao;
-
-	
-
-	$idQuestao = $QuestaoDAO->maiorid($banco);
-
-	$AlternativaDAO = new AlternativaDAO();
 
 	//alternativa1 :  depois fazer outras
 	$alternativa1 =  new Alternativa();

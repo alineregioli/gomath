@@ -40,6 +40,9 @@
 						</li>
 						<li class="nav-item">
 							<a class="nav-link " href="ranking">Ranking</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link " href="conteudo">Conteúdos</a>
 						</li>					
 					</ul>
 					<ul class="navbar-nav ml-auto mt-auto "> <!-- menu -->

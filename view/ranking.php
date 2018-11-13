@@ -13,6 +13,7 @@
 						    <tr>
 						      <th scope="col" class="w-20">Posição</th>
 						      <th scope="col" class="w-30">Nome</th>
+						      <th scope="col" class="w-30">Pontos</th>
 						      <th scope="col" class="w-10">Resolvidos</th>
 						    </tr>
 						</thead>

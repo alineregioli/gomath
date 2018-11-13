@@ -13,6 +13,7 @@ jQuery(document).ready(function($){
             $("#ten").after(" "+response[0].tentados);
             $("#res").after(" "+response[1].resolvidos);
             $("#pos").after(" "+response[4]+"º");
+            $("#pon").after(" "+response[5]);
             $("#user").after('<input type="hidden" id="total" name="total" value="'+response[3]+'">');
             var total = parseInt($("#total").val());
             if(page == total/limit){

@@ -66,11 +66,12 @@ Class SubmissaoDAO{
     } 
 
     public function retornarRanking($banco){
-        $sql = "SELECT tbusuario.usuarioNomeCompleto as nome, tbusuario.usuarioId as id, COUNT( DISTINCT(tbsubmissao.TbQuestao_questaoId) ) as resolvidos
+        $sql = "SELECT tbusuario.usuarioNomeCompleto as nome, tbusuario.usuarioId as id, COUNT( DISTINCT(tbsubmissao.TbQuestao_questaoId) ) as resolvidos, SUM( tbquestao.questaoDificuldade ) as pontos
                 FROM tbusuario
                 INNER JOIN tbsubmissao ON tbusuario.usuarioId = tbsubmissao.TbUsuario_usuarioId
+                INNER JOIN tbquestao ON tbquestao.questaoId = tbsubmissao.TbQuestao_questaoId
                 INNER JOIN tbalternativa ON tbalternativa.alternativaId = tbsubmissao.TbAlternativa_alternativaId
-               WHERE tbalternativa.alternativacorreta = 1 GROUP BY nome order by resolvidos desc;";
+               WHERE tbalternativa.alternativacorreta = 1 GROUP BY nome order by pontos desc;";
         $result = $banco->conexao->query($sql);
         if(mysqli_num_rows ($result) > 0){
             $questoes = array();
