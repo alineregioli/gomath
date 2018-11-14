@@ -21,7 +21,9 @@ Class QuestaoDAO{
         $sql .=  implode("','", $objeto->__values());
         $sql .= "')";
         if ($banco->conexao->query($sql) === TRUE) {
+
             echo "Cadastrado com sucesso";
+            return mysqli_insert_id($banco->conexao);
         } 
         else {
             throw new Exception("Error: " . $sql . "<br>" . $banco->conexao->error);

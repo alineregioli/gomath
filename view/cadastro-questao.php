@@ -23,9 +23,8 @@
 		<!-- Campo registrar -->
 		<div class="container " style="background:transparent; margin-top: 10px; margin-bottom: 20px;	">
 			<div class="row" >
-				<div class="col-md-2"> </div>
-
-				<div class="col-md-8 rounded" style="background:white;margin-top: 10px;">
+			
+				<div class="col-md-12 centro rounded" style="background:white;margin-top: 10px;">
 
 					<form action="control/cadastrar-questao.php" method="POST" >
 						<p></p>
@@ -110,7 +109,7 @@
 					</form>
 				</div>
 
-				<div class="col-md-2"> </div>
+			
 			</div>
 		</div>
 		<!-- rodapé -->

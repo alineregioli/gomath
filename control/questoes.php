@@ -6,7 +6,7 @@ require_once('../model/QuestaoDAO.php');
 require_once('../model/Alternativa.php');
 require_once('../model/AlternativaDAO.php');
 
-$paginacao = 1;
+$paginacao = 10;
 $atual = intval($_POST['page']);
 $banco = new Banco();
 $banco->conectar();
