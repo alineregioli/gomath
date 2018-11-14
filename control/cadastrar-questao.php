@@ -19,6 +19,7 @@ $Questao->__set('questaoDados',$_POST['paraSalvar']);//colocar no banco
 var_dump($Questao);
 var_dump($Questao->__attributes());
 $QuestaoDAO = new QuestaoDAO();
+$AlternativaDAO = new AlternativaDAO();
 
 try{
 	$idQuestao = $QuestaoDAO->inserir($banco,$Questao);
