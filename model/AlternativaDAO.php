@@ -20,7 +20,7 @@ Class AlternativaDAO{
         $sql .= "')";
         if ($banco->conexao->query($sql) === TRUE) {
             echo "Cadastrado com sucesso";
-            return mysqli_insert_id($banco->conexao);
+            return $banco->conexao->insert_id;
         } 
         else {
             throw new Exception("Error: " . $sql . "<br>" . $banco->conexao->error);
