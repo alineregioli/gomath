@@ -14,6 +14,7 @@ $data[] = SubmissaoDAO::resolvidos($banco,$_POST['id']);
 $data[] = SubmissaoDAO::retornarSubmissoes($banco,$_POST['id']);
 $ranking = SubmissaoDAO::retornarRanking($banco);
 $pos = count($ranking)+1;
+$pontos = 0;
 foreach ($ranking as $key => $value) {
 	if($value['id'] == $_POST['id']){
 		$pos = $key+1;
