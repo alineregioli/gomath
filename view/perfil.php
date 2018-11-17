@@ -1,5 +1,4 @@
 
-
 		<div class="container" style="background:white; margin-top: 10px;">
 			<div class="row" >
 				<div class="col-md-12 centro" style="margin-top: 10px;">
@@ -12,7 +11,7 @@
 
 
 					<input type="hidden" id="page" name="page" value="1">
-					<input type="hidden" id="limit" name="limit" value="2">
+					<input type="hidden" id="limit" name="limit" value="4">
 					<input type="hidden" id="user" name="user" value="<?php echo $_SESSION["id"]; ?>">
 					<h1 class="text-center">Submissões</h1>
 					<table class="table table-striped table-sm table-hover ">
