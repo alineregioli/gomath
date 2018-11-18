@@ -12,7 +12,7 @@
 
 
 					<input type="hidden" id="page" name="page" value="1">
-					<input type="hidden" id="limit" name="limit" value="2">
+					<input type="hidden" id="limit" name="limit" value="10">
 					<input type="hidden" id="user" name="user" value="<?php echo $_SESSION["id"]; ?>">
 					<h1 class="text-center">Submissões</h1>
 					<table class="table table-striped table-sm table-hover ">

@@ -5,7 +5,7 @@
 				<div class="col-md-12 centro" style="margin-top: 10px;">
 					<h1 class="text-center">Ranking</h1>
 					<input type="hidden" id="page" name="page" value="1">
-					<input type="hidden" id="limit" name="limit" value="2">
+					<input type="hidden" id="limit" name="limit" value="10">
 					<input type="hidden" id="user" name="user" value="<?php echo $_SESSION["id"]; ?>">
 					<table class="table table-striped table-sm table-hover ">
 						<thead class="thead-dark">
