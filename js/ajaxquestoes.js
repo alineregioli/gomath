@@ -16,6 +16,9 @@ jQuery(document).ready(function($){
         		$("#"+i).append("<td>"+response[i].assunto+"</td>");
         		$("#"+i).append("<td>0</td>");
         		$("#"+i).append("<td>"+response[i].nivel+"</td>");
+                if($("#adm").val() == '1'){
+                    $("#"+i).append('<td><form action="control/deletar.php" method="POST"><input type="hidden" name="id" value="'+response[i].id+'"><input class="btn-danger btn" type="submit" value="Excluir"></form></td>');
+                }
 			}
 			if(dados == response[n-1]-1){
 				$("#next").addClass('disabled');

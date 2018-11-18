@@ -17,13 +17,16 @@
 					
 
 						if(isset($_SESSION['acesso']) && $_SESSION['acesso'] == 1){//é administrador
-					
-						echo '<a class="btn btn-success float-right" href="cadastro-questao" role="button">CADASTRAR PROBLEMA</a>
-						
-						<br><br>';
+							echo '<input type="hidden" id="adm" name="adm" value="1">';
+							echo '<a class="btn btn-success float-right" href="cadastro-questao" role="button">CADASTRAR PROBLEMA</a>
+							
+							<br><br>';
+						}
+						else{
+							echo '<input type="hidden" id="adm" name="adm" value="0">';
 						}
 					?>
-
+				
 					<input type="hidden" id="page" name="page" value="<?php echo $page;?>">
 
 					<table class="table table-striped table-sm table-hover ">
@@ -36,6 +39,12 @@
 						      <th scope="col" class="w-10">Assunto</th>
 						      <th scope="col" class="w-5">Resolveram</th>
 						      <th scope="col" class="w-5">Nível</th>
+						      <?php 
+
+						      if(isset($_SESSION['acesso']) && $_SESSION['acesso'] == 1){
+									echo '<th scope="col" class="w-5">Ação</th>';
+							 	}
+								?>
 						    </tr>
 						</thead>
 						<tbody id="problemas">

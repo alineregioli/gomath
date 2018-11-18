@@ -31,6 +31,18 @@ Class QuestaoDAO{
 
     }
 
+    public function excluir($banco,$id){
+        $sql= "DELETE FROM tbquestao WHERE questaoId = $id";
+        if ($banco->conexao->query($sql) === TRUE) {
+            echo "Deletado com sucesso";
+            return mysqli_insert_id($banco->conexao);
+        } 
+        else {
+            throw new Exception("Error: " . $sql . "<br>" . $banco->conexao->error);
+        }
+
+    }
+
     public function retornarQuestao($banco,$id){
         $sql = "SELECT questaoId as id,
 questaoNome as nome, questaoDificuldade as nivel, questaoAssunto as assunto, questaoDescricao as descricao, questaoDados as dados FROM tbquestao WHERE questaoId = $id;";
