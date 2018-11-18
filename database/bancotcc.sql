@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 18-Nov-2018 às 01:34
+-- Generation Time: 18-Nov-2018 às 01:36
 -- Versão do servidor: 10.1.32-MariaDB
 -- PHP Version: 7.2.5
 
@@ -51,7 +51,11 @@ INSERT INTO `tbalternativa` (`alternativaId`, `alternativaTexto`, `alternativaco
 (9, '$a maneiras', 1, 3),
 (10, '$b maneiras', 0, 3),
 (11, '$c maneiras', 0, 3),
-(12, '$d maneiras', 0, 3);
+(12, '$d maneiras', 0, 3),
+(13, '1', 1, 4),
+(14, '2', 0, 4),
+(15, '3', 0, 4),
+(16, '4', 0, 4);
 
 -- --------------------------------------------------------
 
@@ -95,7 +99,8 @@ CREATE TABLE `tbquestao` (
 INSERT INTO `tbquestao` (`questaoId`, `questaoNome`, `questaoDescricao`, `questaoDataCriacao`, `questaoAssunto`, `questaoDificuldade`, `questaoDados`) VALUES
 (1, 'Banco da praça', '$x casais de namorados vão sentar-se em um banco de uma praça. Em quantas ordens diferentes os seis podem sentar-se de modo que cada namorado fique ao lado de sua namorada? ', '2018-11-18 00:40:23', 'Princípio Fundamental de Contagem , PFC', 2, '$x = rand(2,4);\r\n\r\n$i = $x;\r\n$ans = 1;\r\nwhile ($i >= 1){\r\n    $ans *= $i*2;\r\n    $i--;\r\n}\r\n\r\n$a = $ans;\r\n$b = $ans/2;\r\n$c = $ans+12;\r\n$d = $ans*2;'),
 (2, 'Escolhendo o look', 'Fábio tem $x camisas: $xp1 preta de mangas curtas , $xp2 preta de mangas compridas , $xa azul , $xc cinza e $xb branca e $y calças : $yp preta , $ya azul , $yv verde e $ym marrom. De quantas maneiras diferentes ele pode se vestir com uma camisa e uma calça de cores distintas? ', '2018-11-18 01:01:22', 'Princípio Fundamental de Contagem , PFC', 1, '$xp1 = rand(1,2);\r\n$xp2 = rand(1,2);\r\n$xa = rand(1,2);\r\n$xc = rand(1,2);\r\n$xb = rand(1,2);\r\n$x = $xp1 + $xp2 + $xa + $xc + $xb;\r\n\r\n$yp = rand(1,2);\r\n$ya = rand(1,2);\r\n$yv = rand(1,2);\r\n$ym = rand(1,2);\r\n$y = $yp + $ya + $yv + $ym; \r\n\r\n\r\n$ans = $x * $y - ($xp1 *$yp) - ($xp2 *$yp) - ($xa *$ya);\r\n\r\n$a = $ans;\r\n$b = $ans-2;\r\n$c = $ans+12;\r\n$d = $ans*2;\r\n'),
-(3, 'Figurinhas', 'Bruno tem $x figurinhas idênticas com a bandeira da Alemanha, $y com a bandeira do Brasil e $z com a da Colômbia. Ele quer fazer um pacote com pelo menos 3 dessas figurinhas. De quantas maneiras ele pode fazer esse pacote?', '2018-11-18 01:29:19', 'Princípio Fundamental de Contagem , PFC', 1, '$x = rand(4,6);\r\n$y = rand(4,6);\r\n$z = rand(4,6);\r\n\r\n$ans = $x * $y * $z;\r\n\r\n$a = $ans;\r\n$b = $ans-2;\r\n$c = $ans+12;\r\n$d = $ans*2;\r\n');
+(3, 'Figurinhas', 'Bruno tem $x figurinhas idênticas com a bandeira da Alemanha, $y com a bandeira do Brasil e $z com a da Colômbia. Ele quer fazer um pacote com pelo menos 3 dessas figurinhas. De quantas maneiras ele pode fazer esse pacote?', '2018-11-18 01:29:19', 'Princípio Fundamental de Contagem , PFC', 1, '$x = rand(4,6);\r\n$y = rand(4,6);\r\n$z = rand(4,6);\r\n\r\n$ans = $x * $y * $z;\r\n\r\n$a = $ans;\r\n$b = $ans-2;\r\n$c = $ans+12;\r\n$d = $ans*2;\r\n'),
+(4, 'teste', 'a resposta certa é 1', '2018-11-18 01:36:23', 'lalala', 1, '$x = 2;');
 
 -- --------------------------------------------------------
 
@@ -192,7 +197,7 @@ ALTER TABLE `tbusuario`
 -- AUTO_INCREMENT for table `tbalternativa`
 --
 ALTER TABLE `tbalternativa`
-  MODIFY `alternativaId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `alternativaId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT for table `tbespecie`
@@ -204,13 +209,13 @@ ALTER TABLE `tbespecie`
 -- AUTO_INCREMENT for table `tbquestao`
 --
 ALTER TABLE `tbquestao`
-  MODIFY `questaoId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `questaoId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `tbsubmissao`
 --
 ALTER TABLE `tbsubmissao`
-  MODIFY `submissaoId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `submissaoId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `tbusuario`
