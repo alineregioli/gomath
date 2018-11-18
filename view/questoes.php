@@ -34,9 +34,9 @@
 							
 						    <tr>
 						      <th scope="col" class="w-20">ID</th>
-						      <th scope="col" class="w-10">#</th>
-						      <th scope="col" class="w-50">Nome</th>
-						      <th scope="col" class="w-10">Assunto</th>
+						     <!-- <th scope="col" class="w-10">#</th> --> 
+						      <th scope="col" class="w-70">Nome</th>
+						     <!--  <th scope="col" class="w-10">Assunto</th> -->
 						      <th scope="col" class="w-5">Resolveram</th>
 						      <th scope="col" class="w-5">Nível</th>
 						      <?php 

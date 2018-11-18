@@ -31,12 +31,12 @@
 				<?php }  
 				else{  ?>
 					<div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-					<ul class="navbar-nav mx-auto mt-auto "> <!-- menu -->
+					<ul class="navbar-nav  mt-auto " style="margin-left: 15px;"> <!-- menu -->
 						<li class="nav-item">
 							<a class="nav-link " href="perfil">Perfil</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link " href="0">Problemas</a>
+							<a class="nav-link " href="0">Questões</a>
 						</li>
 						<li class="nav-item">
 							<a class="nav-link " href="ranking">Ranking</a>

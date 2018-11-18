@@ -22,33 +22,35 @@
 				<div class="col-md-6 centro" >
 					<form action="control/cadastrar.php" method="POST" >
 						<div class="form-group">
-							<label for="nome-completo" class="mb-0 mt-5">Nome completo</label>
-							<input type="text" class="form-control" id="nome-completo" name="nome-completo" placeholder="Maria da Silva">
+							<label for="nome-completo" class="mb-0 mt-5">Nome completo*</label>
+							<input type="text" class="form-control" id="nome-completo" name="nome-completo" placeholder="Maria da Silva" required>
 						</div>
 						<div class="form-group">
-							<label for="email" class="mb-0">Email</label>
-							<input type="email" class="form-control" id="email" name="email" placeholder="maria@email.com">
+							<label for="email" class="mb-0">Email*</label>
+							<input type="email" class="form-control" id="email" name="email" placeholder="maria@email.com" required>
 						</div>
 						<div class="form-group">
-							<label for="senha" class="mb-0">Senha</label>
-							<input type="password" class="form-control" id="senha" name="senha"placeholder="*******">
+							<label for="senha" class="mb-0">Senha*</label>
+							<input type="password" class="form-control" id="senha" name="senha"placeholder="*******" required>
 						</div>
 						<div class="form-group">
-							<label for="confirmar-senha" class="mb-0">Confirmar Senha</label>
-							<input type="password" class="form-control" id="confirmar-senha" name="confirmar-senha" placeholder="*******">
+							<label for="confirmar-senha" class="mb-0">Confirmar Senha*</label>
+							<input type="password" class="form-control" id="confirmar-senha" name="confirmar-senha" placeholder="*******" required>
 						</div>
-						<div class="form-group ">
+						<!-- <div class="form-group ">
 							<label for="sexo" class="mb-0" >Sexo</label>
 							<div class="clearfix"></div>
 							<div class="form-check form-check-inline">
 								<input class="form-check-input" type="radio" name="sexo" id="feminino" value="feminino">
 								<label class="form-check-label" for="feminino">Feminino</label>
 							</div>
+							
 							<div class="form-check form-check-inline">
 								<input class="form-check-input" type="radio" name="sexo" id="masculino" value="masculino">
 								<label class="form-check-label" for="masculino">Masculino</label>
 							</div>
-						</div>
+
+						</div> -->	
 
 						
 
