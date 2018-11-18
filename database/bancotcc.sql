@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 18-Nov-2018 às 01:36
+-- Generation Time: 18-Nov-2018 às 01:40
 -- Versão do servidor: 10.1.32-MariaDB
 -- PHP Version: 7.2.5
 
@@ -139,9 +139,7 @@ CREATE TABLE `tbusuario` (
 --
 
 INSERT INTO `tbusuario` (`usuarioId`, `usuarioNomeCompleto`, `usuarioEmail`, `usuarioSenha`, `usuarioDataCadastro`, `usuarioSexo`, `TbEspecie_especieId`) VALUES
-(1, 'adm', 'adm@gmail.com', 'adm', '2018-11-18 00:29:24', 'f', 1),
-(2, 'Aline Regina de Oliveira', 'alineregioli@hotmail.com', '123', '2018-11-18 00:43:08', 'f', 2),
-(9, 'ada', 'alineregioli@gmail.com', '123', '2018-11-18 01:32:30', 'f', 2);
+(1, 'adm', 'adm@gmail.com', 'adm', '2018-11-18 00:29:24', 'f', 1);
 
 --
 -- Indexes for dumped tables
