@@ -25,7 +25,7 @@
 			<div class="row" >
 				<div class="col-md-12 centro" style="margin-top: 10px;">
 					
-					
+					<h3 class="text-center" id="time" ></h3>
 					<h3 class="text-center" id="titulo" ></h3>
 					<h5 class="text-center" id = "nivel"></h5>
 

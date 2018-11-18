@@ -8,7 +8,6 @@ require_once('../model/AlternativaDAO.php');
 
 $banco = new Banco();
 $banco->conectar();
-echo '<pre>';
 $Questao = new Questao();
 $Questao->__set('questaoNome',$_POST['nomeQuestao']);
 $Questao->__set('questaoDescricao',$_POST['enunciadoQuestao']);
@@ -16,8 +15,6 @@ $Questao->__set('questaoDataCriacao', date('Y-m-d H:i:s'));
 $Questao->__set('questaoAssunto',$_POST['assuntoQuestao']);
 $Questao->__set('questaoDificuldade',$_POST['dificuldadeQuestao']);//colocar no banco
 $Questao->__set('questaoDados',$_POST['paraSalvar']);//colocar no banco
-var_dump($Questao);
-var_dump($Questao->__attributes());
 $QuestaoDAO = new QuestaoDAO();
 $AlternativaDAO = new AlternativaDAO();
 
@@ -56,7 +53,7 @@ try{
     $alternativa4->__set('TbQuestao_questaoId', $idQuestao);
     $alternativa4->__set('alternativaCorreta', 0);
     $AlternativaDAO->inserir($banco,$alternativa4);
-
+    header("Location: ../0");
 
 
 

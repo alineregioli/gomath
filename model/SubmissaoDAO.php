@@ -66,17 +66,35 @@ Class SubmissaoDAO{
     } 
 
     public function retornarRanking($banco){
-        $sql = "SELECT tbusuario.usuarioNomeCompleto as nome, tbusuario.usuarioId as id, COUNT( DISTINCT(tbsubmissao.TbQuestao_questaoId) ) as resolvidos, SUM( tbquestao.questaoDificuldade ) as pontos
+        $sql = "SELECT id, nome, COUNT( DISTINCT(resolvidos) ) as resolvidos, SUM(pontos) as pontos FROM (SELECT DISTINCT * FROM (SELECT tbusuario.usuarioNomeCompleto as nome, tbusuario.usuarioId as id, tbsubmissao.TbQuestao_questaoId as resolvidos, tbquestao.questaoDificuldade as pontos
                 FROM tbusuario
                 INNER JOIN tbsubmissao ON tbusuario.usuarioId = tbsubmissao.TbUsuario_usuarioId
                 INNER JOIN tbquestao ON tbquestao.questaoId = tbsubmissao.TbQuestao_questaoId
                 INNER JOIN tbalternativa ON tbalternativa.alternativaId = tbsubmissao.TbAlternativa_alternativaId
-               WHERE tbalternativa.alternativacorreta = 1 GROUP BY nome order by pontos desc;";
+               WHERE tbalternativa.alternativacorreta = 1 order by pontos desc) as t) as tt group by nome ORDER BY pontos desc";
         $result = $banco->conexao->query($sql);
         if(mysqli_num_rows ($result) > 0){
             $questoes = array();
             while($row = $result->fetch_assoc()){
                 $questoes[] = $row;
+            }
+            $sql = "SELECT tbusuario.usuarioNomeCompleto as nome, tbusuario.usuarioId as id FROM tbusuario";
+            $result = $banco->conexao->query($sql);
+            if(mysqli_num_rows ($result) > 0){
+                while($row = $result->fetch_assoc()){
+                    $flag = true;
+                    foreach ($questoes as $value) {
+                        if($value['id'] == $row['id']){
+                            $flag = false;
+                            break;
+                        }
+                    }
+                    if($flag){
+                        $row['pontos'] = 0;
+                        $row['resolvidos'] = 0;
+                        $questoes[] = $row;
+                    }
+                }
             }
             return $questoes;
         }
