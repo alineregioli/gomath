@@ -11,9 +11,9 @@ jQuery(document).ready(function($){
         	for (var i = 0; i < n-1; i++) {
         		$("#problemas").append("<tr class='clickable-row' onclick=' window.location = $(this).data(\"href\");' data-href='ver-questao?id="+response[i].id+"' id="+i+">");
         		$("#"+i).append("<td>"+response[i].id+"</td>");
-        		$("#"+i).append("<td>v</td>");
+        		//$("#"+i).append("<td>v</td>");
         		$("#"+i).append("<td>"+response[i].nome+"</td>");
-        		$("#"+i).append("<td>"+response[i].assunto+"</td>");
+        		//$("#"+i).append("<td>"+response[i].assunto+"</td>");
         		$("#"+i).append("<td>0</td>");
         		$("#"+i).append("<td>"+response[i].nivel+"</td>");
 			}

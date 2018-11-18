@@ -21,7 +21,8 @@ Class UsuarioDAO{
         $sql .=  implode("','", $objeto->__values());
         $sql .= "')";
         if ($banco->conexao->query($sql) === TRUE) {
-            echo "Cadastrado com sucesso";
+            //echo "Cadastrado com sucesso";
+             header("Location: ../entrar");
         } 
         else {
             throw new Exception("Error: " . $sql . "<br>" . $banco->conexao->error);
