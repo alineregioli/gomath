@@ -27,7 +27,13 @@ $SubmissaoDAO = new SubmissaoDAO();
 
 try{
 	$SubmissaoDAO->inserir($banco,$Submissao);
-	header("Location: ../perfil");
+	if($veredito){
+		header("Location: ../accepted");
+	}
+	else{
+		header("Location: ../wa");
+	}
+
 }
 catch(Exception $e){
 	echo $e->getMessage();

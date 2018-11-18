@@ -11,5 +11,11 @@ $senha = $_POST['senha'];
 $banco = new Banco();
 $banco->conectar();
 $banco->logar($login,$senha);
-header('Location: ../');
+if(isset($_SESSION['login'])){
+	header('Location: ../');
+}
+else{
+	header('Location: ../entrar');
+}
+
 ?>

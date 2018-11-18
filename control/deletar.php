@@ -5,4 +5,5 @@ require_once('../model/QuestaoDAO.php');
 $banco = new Banco();
 $banco->conectar();
 QuestaoDAO::excluir($banco,$_POST['id']);
+header('Location: ../');
 ?>

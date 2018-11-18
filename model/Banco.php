@@ -16,13 +16,14 @@ Class Banco{
 		$this->conexao = mysqli_connect($this->servername, $this->username, $this->password,$this->database);
 		$this->conexao->set_charset('utf8');
 		$this->conexao->query("SET collation_connection = utf8_general_ci");
+		$this->conexao->query("SET foreign_key_checks = 0");
 	    return $this->conexao;
 	}
 
 	public function logar($login,$senha){
 		session_start();
 		$result = $this->conexao->query("SELECT * FROM `tbusuario` 
-	WHERE `usuarioEmail` = '$login' AND `usuarioSenha`= '$senha'");
+	WHERE usuarioEmail = '$login' AND usuarioSenha = '$senha'");
 		if(mysqli_num_rows ($result) > 0 ){
 			$row = $result->fetch_assoc();
 			$_SESSION['login'] = $login;

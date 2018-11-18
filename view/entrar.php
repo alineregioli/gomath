@@ -31,7 +31,12 @@
 							<label for="senha" class="mb-0">Senha</label>
 							<input type="password" class="form-control" id="senha" name="senha"placeholder="*******" required>
 						</div>
-																		
+
+						<?php 
+							if(isset($aux) && $aux == true){ ?>
+								<p style="color:red">Usuario ou senha incorretos</p>
+							<?php }
+						?>										
 						<button type="submit" class="btn btn-primary  btn-block centro"   >Entrar</button>
 					</form>
 				</div>
